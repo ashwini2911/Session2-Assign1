@@ -1,0 +1,209 @@
+a. Write a Java code with the class name, “acad,” and a method called “main.”
+Hard code the program with two integers and print the sum of those two
+integers.
+
+import java.util.*;
+public class acad {
+public static void main(String args[])
+{
+	int a=4;            //first number
+  int b=5             //second number
+  int c;
+	c=a+b;              //adding two numbers
+	System.out.println("sum of two numbers is:" +c);
+}
+}
+
+b.  Rewrite the above code, wherein the inputs are provided by the user at
+runtime and the output is printed.
+
+import java.util.*;
+public class acad {
+public static void main(String args[])
+{
+	int a,b,c;
+	Scanner sc=new Scanner(System.in);
+  System.out.println("Enter first number");
+	a=sc.nextInt();                                   //taking first number as input
+  System.out.println("Enter second number");    
+	b=sc.nextInt();                                    //taking second number as input
+	c=a+b;                                              //adding two numbers               
+	System.out.println("sum of two numbers is:" +c);
+}
+}
+
+c. Write a program with the method name, “sum()” that accepts two
+parameters from the user and print the sum of those two numbers. The
+output format should be:
+
+import java.util.*;
+public class acad {
+public static void main(String args[])
+{
+	int a,b,c;
+	Scanner sc=new Scanner(System.in);
+ 	a=sc.nextInt();                                   //taking first number as input   
+	b=sc.nextInt();                                    //taking second number as input
+  sum(a,b)          
+	
+}
+public static void sum(int a,int b)
+{
+  int c;
+	c=a+b;                                              //adding two numbers   
+  System.out.println("first number is:" +a);
+  System.out.println("second number is:" +b);
+  System.out.println("sum of two numbers is:" +c);
+}
+}
+
+d. Write a program to accept two numbers from “stdin” and find all the odd
+as well as even numbers present in between them.
+
+import java.util.*;
+public class acad {
+public static void main(String args[])
+{
+	int a,b,c;
+	Scanner sc=new Scanner(System.in);
+	a=sc.nextInt();                                   //taking first number as input
+ 	b=sc.nextInt();                                    //taking second number as input
+	for(int i=a;i<=b;i++)
+  {
+    if(i%2==0)
+    {
+      System.out.println("Even numbers "+i);
+    }
+    else
+    System.out.println("Odd numbers "+i);
+ }
+ }
+}
+
+e.  Joe is scared to go to school. When her dad asked for the reason, Joe said
+that she was unable to complete the task given to her by her teacher. The
+task was to find the “first 10 multiples” of the number entered from
+“stdin”. 
+
+import java.util.*;
+public class acad {
+public static void main(String args[])
+{
+	int a,b,c;
+	Scanner sc=new Scanner(System.in);
+  System.out.println("Input");
+	a=sc.nextInt();                                   //taking number as input
+  for(int i=1;i<=10;i++)
+  {
+     b=a*i;
+    System.out.println(a+"X"+i+"="+b);            //prints the multiple
+}
+}
+}
+
+f. Write a program consisting the method “sum()” and demonstrate the
+concept of method overloading using this method.
+
+import java.util.*;
+public class acad {
+public static void main(String args[])
+{
+	int a,b,c;
+	Scanner sc=new Scanner(System.in);
+ 	a=sc.nextInt();                                   //taking first number as input   
+	b=sc.nextInt();                                    //taking second number as input
+	c=sc.nextInt();                                    //taking third number as input
+  sum(a);
+  sum(a,b);
+  sum(a,b,c);
+	
+}
+public static void sum(int a)
+{
+   System.out.println("Sum method with one parameter" +a);
+}
+
+public static void sum(int a,int b)
+{
+   System.out.println("Sum method with two parameters" +a+" and "+b);
+}
+
+public static void sum(int a,int b,int c)
+{
+   System.out.println("Sum method with three parameters" +a+" and "+b" and "+c);
+}
+}
+
+g. Can you overload a method with the same return type? Explain your
+answer with proper logic.
+
+Yes, Methods having same return type can be overloaded but the agument list must be different. If we want to use method overloading feature of java then we can have multiple methods with same name and same return type but must differ in their argument list.
+If we keeps same return type and argument list is also same then the compiler will throw an error at compile time.
+A screenshot is attached to support the statement.
+package acadgild;
+import java.util.*;
+
+	public class acad
+	{
+	   public static void main(String args[])
+	   {
+	       System.out.println(display( 51 ));
+	       System.out.println(display( 51,54 ));
+	   }
+	   public static int display(int num)
+	   {
+	       System.out.println(" first definition of method disp");
+	       num=num+10;
+	       return num;
+	   }
+	   public static int display(int num,int num2)
+	   {
+	       System.out.println("second definition of method disp" );
+	       num2=num2+num;
+	       return num2;
+	   }
+	}
+
+
+
+h. Write a program in Java using Arrays, that sorts the element in a
+descending order.
+
+import java.util.*;
+public class acad {
+public static void main(String args[])
+{
+	int a;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the size of array");
+  a=sc.nextInt();                                   //taking the size from user
+  int arr[]=new int[a];
+  for(int i=0;i<a;i++)
+  {
+      arr[i]=sc.nextInt();
+  }
+  System.out.println("Sorted array");
+  Arrays.sort(arr);
+  for(int i=0;i<arr.length;i++)
+  {
+  System.out.println(arr[i]);
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
